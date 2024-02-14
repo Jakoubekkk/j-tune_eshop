@@ -1,15 +1,21 @@
 // @ts-nocheck
 
+import { useAuth } from "./auth/Auth";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = ({shoppingCartItems}) => { 
 
+  const {signOut} = useAuth()
   const [cartData, setCartData] = useState(shoppingCartItems);
 
   useEffect(() => {
     setCartData(shoppingCartItems);
   }, [shoppingCartItems]);
+
+  function handleLogOut(): void {
+    signOut();
+}
 
   return (
     <header>
@@ -31,6 +37,7 @@ const NavBar = ({shoppingCartItems}) => {
       <div className="Cart">
         <Link to="/ShoppingCart" state={{ cartData: cartData }}>My Cart({cartData ? cartData.length : 0})</Link>
       </div>
+      <button onClick={handleLogOut}><Link to="/Login" style={{ color: 'white' }}>Sign out</Link></button>
     </header>
   );
 };

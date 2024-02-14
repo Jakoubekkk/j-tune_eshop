@@ -17,6 +17,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
+      console.log(session)
       setSession(session);
       setLoading(false);
     });

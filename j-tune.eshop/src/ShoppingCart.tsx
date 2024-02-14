@@ -13,7 +13,6 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ importedCartItems }) => {
   {
     const { cartData } = location.state
     importedCartItems = cartData;
-    console.log(cartData)
   }
   useEffect(() => {
     if (importedCartItems != null)
@@ -47,7 +46,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ importedCartItems }) => {
           ))
         ) : null }
         <br></br>
-        <button className="navsize"><Link to="/Order" state={{ cartData: cartItems }} style={{ color: 'white' }}>Check order</Link></button>
+        {cartItems && cartItems.length > 0 ? <button className="navsize" ><Link to="/Order" state={{ cartData: cartItems }} style={{ color: 'white' }}>Check order</Link></button> : null}
       </div>
     </div>
   );

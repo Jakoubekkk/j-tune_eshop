@@ -1,6 +1,5 @@
 // @ts-nocheck
 
-import { useAuth } from "./auth/Auth";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -23,33 +22,25 @@ export default function LandingPage({ importedCartItems }): JSX.Element {
     }
   }, [importedCartItems]);
 
-    const {signOut} = useAuth()
-
-    function handleLogOut(): void {
-        signOut();
-    }
 
     return (
-        <div>
-      <header>
+      <div>
         
         <NavBar shoppingCartItems={cartItems} />
-        <button onClick={handleLogOut}>Sign out</button>
-      </header>
 
-      <main>
-      <img style={{ width: 800, height: 500 }} src="src/img/carculture2.jpg" alt="Shrooms"/>
-        <h3 className="Stepinto" >Join our car culture</h3>
-        <p></p>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Naziv-fontu"></link>
-        <Link to="/Home"> {}
-          <button className="Stepin" >Step in</button>
-        </Link>
-      </main>
+        <main>
+        <img style={{ width: 800, height: 500 }} src="src/img/carculture2.jpg" alt="Shrooms"/>
+          <h3 className="Stepinto" >Join our car culture</h3>
+          <p></p>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Naziv-fontu"></link>
+          <Link to="/Home"> {}
+            <button className="Stepin" >Step in</button>
+          </Link>
+        </main>
 
-      <footer>
-        <p>Science 2023</p>
-      </footer>
+        <footer>
+          <p>Science 2023</p>
+        </footer>
     </div>
     )
 }

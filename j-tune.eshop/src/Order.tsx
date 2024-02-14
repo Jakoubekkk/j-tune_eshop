@@ -2,13 +2,14 @@
 
 import NavBar from "./NavBar";
 import { useEffect, useState, useRef } from "react";
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { supabase } from "./supabase/supabaseClient";
 
 const Order = ({ importedCartItems }) => {
 
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [totalPrice, setTotalPrice] = useState();
+  const [warning, setWarning] = useState("");
 
   const name = useRef();
   const surname = useRef();
@@ -23,33 +24,53 @@ const Order = ({ importedCartItems }) => {
 
   const sendOrder = async () => {
 
-    let delivery_type = "";
-    let payment_type = "";
-    let products = "";
-
-    if (delivery_slovakpost.current.checked)
+    if (
+      name.current.value != "" &&
+      surname.current.value != "" &&
+      email.current.value != "" &&
+      phone.current.value != "" &&
+      address.current.value != "" &&
+      city.current.value != "" &&
+      country.current.value != "" &&
+      postal_code.current.value != "" &&
+      delivery_slovakpost.current.checked &&
+      payment_cash_on_delivery.current.checked)
     {
-      delivery_type = "Slovak post";
+      let delivery_type = "";
+      let payment_type = "";
+      let products = "";
+  
+      if (delivery_slovakpost.current.checked)
+      {
+        delivery_type = "Slovak post";
+      }
+  
+      if (payment_cash_on_delivery.current.checked)
+      {
+        payment_type = "Cash on delivery";
+      }
+  
+      cartItems.map((item) => (products += item.description + "-Size:" + item.size + " | "))
+  
+      const { } = await supabase
+      .from('orders')
+      .insert({ 
+        name: name.current.value + " " + surname.current.value, 
+        info: email.current.value + " | " + phone.current.value, 
+        address: address.current.value + ", " + city.current.value + ", " + country.current.value + ", " + postal_code.current.value, 
+        delivery_type: delivery_type, 
+        payment_type: payment_type, 
+        total_price: totalPrice + "€",
+        products: products 
+      })
+      alert("Order sucessfully created!");
+      window.location.href = '/Home';
     }
-
-    if (payment_cash_on_delivery.current.checked)
-    {
-      payment_type = "Cash on delivery";
+    else
+    {  
+      setWarning("Please, fill all your information first!");
+      window.scrollTo({top: 0, behavior: 'smooth'});
     }
-
-    cartItems.map((item) => (products += item.description + "-Size:" + item.size + " | "))
-
-    const { } = await supabase
-    .from('orders')
-    .insert({ 
-      name: name.current.value + " " + surname.current.value, 
-      info: email.current.value + " | " + phone.current.value, 
-      address: address.current.value + ", " + city.current.value + ", " + country.current.value + ", " + postal_code.current.value, 
-      delivery_type: delivery_type, 
-      payment_type: payment_type, 
-      total_price: totalPrice + "€",
-      products: products 
-    })
   }
   
     const location = useLocation()
@@ -83,11 +104,11 @@ const Order = ({ importedCartItems }) => {
 
   return (
     <div>
-      <header>
-        <NavBar shoppingCartItems={cartItems} />
-      </header>
+
+      <NavBar shoppingCartItems={cartItems} />
 
       <main>
+        <a className="warning">{warning}</a>
         <h2>Delivery information</h2>
 
         <div className="order-inline">
@@ -156,10 +177,6 @@ const Order = ({ importedCartItems }) => {
             </div>
             </div>
         </div>
-
-        <br />
-        <h2>Total: {totalPrice}€</h2>
-        <br />
       </main>
 
       <div className="shopping-cart">
@@ -176,6 +193,7 @@ const Order = ({ importedCartItems }) => {
             </div>     
           ))
         ) : null }
+        <h2>Total: {totalPrice}€</h2>
         <br />
         <button className="navsize" onClick={() => sendOrder()}>FINISH ORDER</button>
       </div>

@@ -22,14 +22,11 @@ const About = ({ importedCartItems }) => {
   }, [importedCartItems]);
 
     return (
-        <div>
-        <header>
+      <div>
         
-          <NavBar shoppingCartItems={cartItems} />
-        </header>
+        <NavBar shoppingCartItems={cartItems} />
   
         <main>
-        
           <h2>About</h2>
           <p>based in : Čadca</p>
           <p>From car lovers to car lovers</p>

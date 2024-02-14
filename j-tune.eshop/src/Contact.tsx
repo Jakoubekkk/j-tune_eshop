@@ -22,19 +22,15 @@ const Contact = ({ importedCartItems }) => {
   }, [importedCartItems]);
 
    return(
-       <div>
-      <header>
+    <div>
       
-        <NavBar shoppingCartItems={cartItems} />
-      </header>
+      <NavBar shoppingCartItems={cartItems} />
       
-    <main>
-      
-        <h2>Contact</h2>
-        <p>email: radolskyj@gmail.com</p>
-        <p>phone: 0908 535 696</p>
-        
-    </main>
+      <main>
+          <h2>Contact</h2>
+          <p>email: radolskyj@gmail.com</p>
+          <p>phone: 0908 535 696</p>       
+      </main>
     </div>
     
 

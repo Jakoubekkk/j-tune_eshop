@@ -23,15 +23,7 @@ const Home = ({ importedCartItems }) => {
 
 return (
     <div>
-        <header>
-        
-        
-        
-        
         <NavBar shoppingCartItems={cartItems} />
-        
-
-      </header>
       <main>
         
         <h1 className="New">News</h1>

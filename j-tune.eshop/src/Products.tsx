@@ -73,9 +73,7 @@ const Products = ({ importedCartItems }) => {
 
   return (
     <div>
-      <header>
-        <NavBar shoppingCartItems={cartItems} />
-      </header>
+      <NavBar shoppingCartItems={cartItems} />
       <main>
         <div>
           {products.map((product) => (

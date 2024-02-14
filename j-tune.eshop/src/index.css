@@ -331,3 +331,8 @@ a {
 .order-label {
   font-size: larger;
 }
+
+.warning {
+  font-size: xx-large;
+  color: red;
+}
