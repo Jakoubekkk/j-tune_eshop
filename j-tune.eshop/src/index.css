@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400&display=swap');
+
+
+
+body{
+    background-color: #000000fa; 
+    
+
+}
+.navsize{
+  font-size: 35px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333333;
+    color: #fff;
+}
+  
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #1f1f1ffa;
+    color: #fff;
+}
+  
+header h1 {
+    margin: 0;
+}
+  
+header nav ul {
+  display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+  
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+  
+main {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*padding: 50px;*/
+    background-color: #fff;
+    text-align: center;
+}
+  
+h2 {
+    font-size: xx-large;
+}
+ 
+main button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+  
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+  
+
+
+/*.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Zmeniť na počet stĺpcov, ktoré chceš 
+    grid-gap: 50px;  Medzera medzi obrázkami 
+    align-items: normal;
+  }
+  
+  .image-grid img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  img {
+    width: 300px;
+    height: 350px;
+ 
+ }*/
+
+/*.big-flexbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.small-flexbox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 20px;
+}
+*/
+
+.Stepin {
+background-color: #1f1f1ffa;
+font-size: 30px;
+font-family: fantasy;
+}
+.Stepin:hover {
+    background-color: #1f1f1ffa;
+  }
+
+button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #cc2e23;
+  }
+  .Stepinto{
+    font-size: 40px;
+    font-family: fantasy;
+
+  }
+
+  .New{
+    font-family: fantasy;
+    font-size: 45px;
+
+  }
+
+.mt-5{
+   color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+     font-size: 28px; 
+     font-weight: 400; 
+     line-height: 32px; 
+     margin: 0 0 24px; 
+      
+}
+.text-emerald-300{
+  color: #cc2e23;
+}
+
+/*.w-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 30%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 30%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: blue;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+a {
+  color: #00cc99;
+  text-decoration: none;
+  font-weight: bold;
+}
+.product-box {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: calc(25% - 20px);
+  float: left;
+}
+
+.product-box:nth-child(4n+4) {
+  margin-right: 0;
+  clear: both;
+}
+
+.product-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product-box p {
+  font-size: 1.2rem;
+}
+
+.product-box img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.vrch{
+  text-align: center;
+  align-items: center;
+}
+.btn {
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.shopping-cart-btn {
+	color: #fff;
+	display: flex;
+}
+
+.product-count {
+	margin-top: -5px;
+	width: 20px;
+	height: 20px;
+	border-radius: 12px;
+	background-color: var(--secondary-color);
+	overflow: hidden;
+}
+.Cart{
+  font-size: 35px;
+  
+}
+/* styles.css */
+
+.shopping-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white; /* Biele pozadie */
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #eee; /* Šedé políčko */
+  border-radius: 4px;
+  background-color: #f8f8f8; /* Biele pozadie v boxe */
+  width: 30%;
+  align-items: center;
+  
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.order-inline {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  padding-bottom: 25px;
+}
+
+.order-incolumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rounded-input {
+  padding:10px;
+  border-radius:10px;
+  height: 10px;
+  width: 100%;
+}
+
+.order-rectangle {
+  margin-top: 5px;
+  background: #c4c4c4;
+  border-radius:10px;
+  padding: 10px 0px 10px 0px;
+  flex: auto;
+  width: 200px;
+}
+
+.order-label {
+  font-size: larger;
+}
