@@ -1,0 +1,54 @@
+/* MazdaMiataBlog.css */
+.mazda-miata-blog {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .blog-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .blog-section img {
+    width: 50%;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .text-section {
+    width: 50%;
+  }
+  
+  .text-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .text-section p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Reverse layout for alternating sections */
+  .blog-section.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-section {
+      flex-direction: column;
+    }
+  
+    .blog-section img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .text-section {
+      width: 100%;
+    }
+  }
+  

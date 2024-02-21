@@ -10,6 +10,7 @@ import Order from "../Order";
 import LandingPage from "../LandingPage";
 import ShoppingCart from "../ShoppingCart";
 import { SetStateAction } from "react";
+import Clanok1 from "../Clanok1";
 
 export const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
   {
     path: "/Order",
     element: <Order />,
+  },
+  {
+    path: '/clanok1',
+    element: <Clanok1 />,
   },
 ]);
 
