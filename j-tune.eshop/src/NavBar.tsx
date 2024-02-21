@@ -21,7 +21,7 @@ const NavBar = ({shoppingCartItems}) => {
     <header>
       <Link to="/LandingPage" state={{ cartData: cartData }}>
       <Link to="/LandingPage" state={{ cartData: cartData }}>
-         <img style={{ width: 250, height: 250 }} src="src/img/jtun.png" alt="j&k" className="jak"/>
+         <img style={{ width: 160, height: 90 }} src="src/img/jtun.png" alt="j&k" className="jak"/>
       </Link>
       </Link>
       
