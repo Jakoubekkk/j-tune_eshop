@@ -15,9 +15,3 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   </React.StrictMode>
 );
 
-ReactDOM.render(
-  <React.StrictMode>
-    <ShoppingCart />
-  </React.StrictMode>,
-  document.getElementById("root")
-);

@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import { useEffect, useState } from "react";
 import { supabase } from "./supabase/supabaseClient";
 import { useLocation } from 'react-router-dom'
+import './Products.css';
 
 type Product = {
   id: number;
@@ -75,7 +76,8 @@ const Products = ({ importedCartItems }) => {
     <div>
       <NavBar shoppingCartItems={cartItems} />
       <main>
-        <div>
+          <div>
+          <div className="Products">
           {products.map((product) => (
             <div key={product.id} className="product-box">
               <img src={product.img_url} alt={product.description} />
@@ -88,12 +90,16 @@ const Products = ({ importedCartItems }) => {
                 <option value="XXL">XXL</option>
               </select>
               <p>Price: {product.price}€</p>
-              <button onClick={() => addToCart(product)}>Add to Cart</button>
+              <button className="addtocart" onClick={() => addToCart(product)}>Add to Cart</button>
             </div>
           ))}
+          </div>
         </div>
         {notification && <div className="notification">{notification}</div>}
       </main>
+      <footer>
+          <p>J-Tune Science 2020</p>
+        </footer>
     </div>
   );
 };

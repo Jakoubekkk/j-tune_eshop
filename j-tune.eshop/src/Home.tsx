@@ -26,24 +26,24 @@ const Home = ({ importedCartItems }) => {
   
   const articles = [
     {
-      title: 'Nadchádzajúce automobilové udalosti',
-      content: 'Tento víkend sa pripravte na vzrušujúce automobilové udalosti!',
-      image: 'url_k_obrazku_1.jpg',
+      title: 'Mazda MX-5 má za sebou už štyri generácie a 35 rokov ',
+      content: 'Bezpochyby najúspešnejší roadster na svete , a tak by sme mohli pomenovať MX-5.',
+      image: 'src/img/miata3.jpg',
     },
     {
-      title: 'Mazda MX-5 má za sebou už štyri generácie a 35 rokov',
-      content: 'Bezpochyby najúspešnejší roadster na svete, aj tak by sme mohli pomenovať MX-5.',
-      image: 'src/img/miata.jpg',
+      title: 'Lexus RC F je V8 fosília ktorá MUSÍ prežiť. Atmosferický motor?',
+      content: 'Dnes sa atmosférické benzínové motory už nenosia.',
+      image: 'src/img/takumi.jpg',
     },
     {
-      title: 'Ako udržiavať váš automobil v optimálnom stave',
-      content: 'Tipy a triky na udržiavanie vašeho vozidla v top kondícii.',
-      image: 'url_k_obrazku_2.jpg',
+      title: 'Honda NSX: Japonské "Ferrari" otriaslo v Amerike pred 25 rokmi',
+      content: 'Japonci predstavili v roku 1989 v Chicagu superšport.',
+      image: 'src/img/nsx3.jpg',
     },
     {
-      title: 'Ako udržiavať váš automobil v optimálnom stave',
-      content: 'Tipy a triky na udržiavanie vašeho vozidla v top kondícii.',
-      image: 'url_k_obrazku_2.jpg',
+      title: 'Porsche boxster 986 S. Legenda a zábavné kabrio za dobrý peniaz?',
+      content: 'Pôvodné Porsche Boxster z roku 1996.',
+      image: 'src/img/boxster1.jpg',
     },
   ];
   
@@ -52,10 +52,10 @@ return (
       <div>
         <NavBar shoppingCartItems={cartItems} />
         <main>
+        <div className="home-container">
           <div className="home-page">
             <h1>Vitajte na našom portáli pre motoristov!</h1>
             <div className="articles-container">
-            {/* <button className="navsize" ><Link to="/Clanok1" state={{ cartData: cartItems }} style={{ color: 'white' }}>Check order</Link></button> */}
               {articles.map((article, index) => (
                 <Link to={`/Clanok${index + 1}`} state={{ cartData: cartItems }} key={index} className="article-link">
                   <div className="article">
@@ -67,7 +67,11 @@ return (
               ))}
             </div>
           </div>
+          </div>
         </main>
+        <footer>
+          <p>J-Tune Science 2020</p>
+        </footer>
       </div>
     );
   };

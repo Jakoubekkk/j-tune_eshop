@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from 'react';
 import './Clanok1.css';
 import NavBar from './NavBar';
@@ -5,6 +7,7 @@ import Products from './Products';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom'
+import ReactPlayer from 'react-player';
 
 
 const Clanok1 = ({ importedCartItems }) => {
@@ -23,38 +26,45 @@ const Clanok1 = ({ importedCartItems }) => {
         setCartItems(importedCartItems)
       }
     }, [importedCartItems]);
+    
 
     return (
-<div>
-    <NavBar shoppingCartItems={cartItems} />
-    <main>  
-      <div className="mazda-miata-blog">
-        <div className="blog-section">
-          <img src="https://source.unsplash.com/1200x600/?mazda-miata" alt="Mazda Miata" />
-          <div className="text-section">
-            <h2>Záhadná krása: Mazda Miata</h2>
-            <p>
-              Mazda Miata, známá také jako MX-5, je legendárním roadsterem, který se vyznačuje skvělým
-              designem, lehkostí a vynikajícím ovládáním. Sledujte náš nový blog a podívejte se na to,
-              co tuto ikonickou automobilovou značku dělá tak jedinečnou.
-            </p>
+      <div>
+        <NavBar shoppingCartItems={cartItems} />
+        <main>  
+          <div className="blog">
+            <div className="blog-section">
+              <img src="src/img/miata3.jpg" alt="mazda mx5 miata" />
+              <div className="text-section">
+                <h2>Nestarnúca Mazda MX-5</h2>
+                <p>
+                Malé dvojdverové a dvojmiestne japonské auto malo svetovú premiéru 9. februára 1989 na autosalóne v Chicagu. Aj keď ju u nás poznáme pod názvom MX-5, v Japonsku je to Mazda Rodster a v Spojených štátoch Miata. Prvá generácia NA dostala ako jediná vyklápacie predné svetlá, teda maličkosť, ktorú miluje asi každý petrolhead.
+                Zo začiatku ste si MX-5 mohli kúpiť v bežnej červenej či modrej farbe, neskôr pribúdali strieborné alebo čierne odtiene. K dispozícii boli tiež špeciálne edície, napríklad vo farbe Racing Green, Speed Yellow alebo takzvanej Nachtblau.
+                </p>
+              </div>
+            </div>
+            <div className="blog-section reverse">
+              <div className="text-section">
+                <h2>Vážila menej ako tonu</h2>
+                <p>
+                Pohotovostná hmotnosť Miaty začínala pod jednou tonou, čo je dnes takmer nepredstaviteľné. Samozrejme má na tom vplyv aj slabšia pasívna bezpečnosť v podobe menej robustných výstuh. Ideálne rozloženie hmotnosti 50:50 zabezpečilo perfektné jazdné vlastnosti a tiež radosť z jazdy nielen na ceste, ale aj pri rôznych slalomoch a súťažiach.
+                Na všetkých kolesách boli kotúčové brzdy, vpredu dokonca aj s vnútorným chladením. V priebehu výroby sa zvyšovala i pasívna bezpečnosť s dodatočnými výstuhami a upravenou karosériou, ruku v ruke s tým išla aj vyššia hmotnosť. 
+                </p>
+                <p>
+                Airbagy či ABS neboli v sérii, za tie ste si najprv priplácali, rovnako ste mali v cenníku aj klimatizáciu či vyhrievané sedadlá.
+                Do predaja sa MX-5 dostala s benzínovým štvorvalcom 1.6 a výkonom 85 kW (115 koní). Následne v roku 1994 prišla väčšia 1.8 naladená na 96 kW (131 koní) a o pár mesiacov sa do ponuky vrátila aj menšia 1.6 s 66 kW (90 koní).
+                </p>
+              </div>
+              <img src="src/img/miata4.jpg" alt="Mazda mx5" />
+            </div>
           </div>
-        </div>
-        <div className="blog-section reverse">
-          <div className="text-section">
-            <h2>Pod kapotou: Technické detaily</h2>
-            <p>
-              Mazda Miata je vybavena špičkovými technologickými prvky, které zajišťují vynikající
-              výkon a spolehlivost. Přečtěte si naši podrobnou recenzi a zjistěte více o motoru,
-              převodovce a dalších technických parametrech.
-            </p>
-          </div>
-          <img src="https://source.unsplash.com/1200x600/?mazda-miata-engine" alt="Mazda Miata Engine" />
-        </div>
+        </main>
+        <footer>
+          <p>J-Tune Science 2020</p>
+        </footer>
       </div>
-    </main>
-</div>
     );
-  };
-  
-  export default Clanok1;
+    
+}; 
+
+export default Clanok1;

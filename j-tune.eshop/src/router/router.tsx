@@ -12,6 +12,8 @@ import ShoppingCart from "../ShoppingCart";
 import { SetStateAction } from "react";
 import Clanok1 from "../Clanok1";
 import Clanok2 from "../Clanok2";
+import Clanok3 from "../Clanok3";
+import Clanok4 from "../Clanok4";
 
 export const router = createBrowserRouter([
   {
@@ -63,6 +65,14 @@ export const router = createBrowserRouter([
   {
     path: '/clanok2',
     element: <Clanok2 />,
+  },
+  {
+    path: '/clanok3',
+    element: <Clanok3 />,
+  },
+  {
+    path: '/clanok4',
+    element: <Clanok4 />,
   },
 ]);
 

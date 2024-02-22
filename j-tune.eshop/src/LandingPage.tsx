@@ -29,17 +29,17 @@ export default function LandingPage({ importedCartItems }): JSX.Element {
         <NavBar shoppingCartItems={cartItems} />
 
         <main>
-        <img style={{ width: 800, height: 500 }} src="src/img/carculture2.jpg" alt="Shrooms"/>
-          <h3 className="Stepinto" >Join our car culture</h3>
+        <img style={{ width: 420, height: 600 }} src="src/img/crew.jpg" alt="car"/>
+          <h3 className="Stepinto" >Pripoj sa k Nám!</h3>
           <p></p>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Naziv-fontu"></link>
           <Link to="/Home"> {}
-            <button className="Stepin" >Step in</button>
+            <button className="Stepin" >Pripojiť</button>
           </Link>
         </main>
 
         <footer>
-          <p>Science 2023</p>
+          <p>J-Tune Science 2020</p>
         </footer>
     </div>
     )

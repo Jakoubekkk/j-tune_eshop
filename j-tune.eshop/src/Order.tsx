@@ -197,6 +197,9 @@ const Order = ({ importedCartItems }) => {
         <br />
         <button className="navsize" onClick={() => sendOrder()}>FINISH ORDER</button>
       </div>
+      <footer>
+          <p>J-Tune Science 2020</p>
+        </footer>
     </div>
   );
 }

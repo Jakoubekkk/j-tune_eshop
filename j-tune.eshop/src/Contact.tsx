@@ -3,6 +3,7 @@
 import NavBar from "./NavBar";
 import { useEffect, useState } from "react";
 import { useLocation } from 'react-router-dom'
+import "./Contact.css";
 
 const Contact = ({ importedCartItems }) => {
 
@@ -27,10 +28,23 @@ const Contact = ({ importedCartItems }) => {
       <NavBar shoppingCartItems={cartItems} />
       
       <main>
-          <h2>Contact</h2>
-          <p>email: radolskyj@gmail.com</p>
-          <p>phone: 0908 535 696</p>       
+      <div className="contact-container">
+      <h1>Kontaktuj nás!</h1>
+      <p>
+        Máte otázky alebo by ste sa s nami chceli skontaktovať? Neváhajte nás kontaktovať pomocou uvedených kontaktných informácií.
+      </p>
+      <div className="contact-info">
+        <p>Email: j.tune@gmail.com</p>
+        <p>Phone: +421905573829</p>
+        <p>Instagram: @j_tune.sk</p>
+        <p>Facebook: J-Tune.sk</p>
+      </div>
+      <img src="src/img/iso.jpg" alt="j-tune" />
+    </div>     
       </main>
+      <footer>
+          <p>J-Tune Science 2020</p>
+        </footer>
     </div>
     
 

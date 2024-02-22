@@ -9,6 +9,11 @@ body{
 }
 .navsize{
   font-size: 35px;
+  border-radius: 25px;
+}
+.navsize:hover{
+  background-color: #e03e3efa;
+    transform: scale(1.1);
 }
 .navbar {
     display: flex;
@@ -56,7 +61,7 @@ main {
    display: flex;
     flex-direction: column;
     align-items: center;
-    /*padding: 50px;*/
+    padding: 50px;
     background-color: #fff;
     text-align: center;
 }
@@ -80,42 +85,6 @@ footer {
     text-align: center;
     padding: 20px;
 }
-  
-
-
-/*.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Zmeniť na počet stĺpcov, ktoré chceš 
-    grid-gap: 50px;  Medzera medzi obrázkami 
-    align-items: normal;
-  }
-  
-  .image-grid img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  img {
-    width: 300px;
-    height: 350px;
- 
- }*/
-
-/*.big-flexbox {
-  display: flex;
-  justify-content: center;
-  margin-top: 80px;
-}
-
-.small-flexbox {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-left: 20px;
-  margin-right: 20px;
-  gap: 20px;
-}
-*/
 
 .Stepin {
 background-color: #1f1f1ffa;
@@ -123,7 +92,8 @@ font-size: 30px;
 font-family: fantasy;
 }
 .Stepin:hover {
-    background-color: #1f1f1ffa;
+    background-color: #fd0404fa;
+    transform: scale(1.05);
   }
 
 button {
@@ -163,12 +133,7 @@ button {
   color: #cc2e23;
 }
 
-/*.w-screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-*/
+
 
 form {
   display: flex;
@@ -209,35 +174,6 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
-.product-box {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  width: calc(25% - 20px);
-  float: left;
-}
-
-.product-box:nth-child(4n+4) {
-  margin-right: 0;
-  clear: both;
-}
-
-.product-box h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.product-box p {
-  font-size: 1.2rem;
-}
-
-.product-box img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-}
 .vrch{
   text-align: center;
   align-items: center;
@@ -266,7 +202,7 @@ a {
   font-size: 35px;
   
 }
-/* styles.css */
+
 
 .shopping-cart {
   display: flex;

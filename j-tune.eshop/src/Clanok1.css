@@ -1,6 +1,6 @@
-/* MazdaMiataBlog.css */
-.mazda-miata-blog {
-    max-width: 800px;
+
+.blog {
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -29,10 +29,11 @@
   
   .text-section p {
     font-size: 16px;
-    color: #666;
+    color: #3d3d3d;
+    text-align: justify;
   }
   
-  /* Reverse layout for alternating sections */
+  
   .blog-section.reverse {
     flex-direction: row-reverse;
   }
@@ -51,4 +52,5 @@
       width: 100%;
     }
   }
+  
   
