@@ -29,7 +29,7 @@ export default function LandingPage({ importedCartItems }): JSX.Element {
         <NavBar shoppingCartItems={cartItems} />
 
         <main>
-        <img style={{ width: 420, height: 600 }} src="/assets/crew.jpg" alt="car"/>
+        <img style={{ width: 420, height: 600 }} src="src/assets/crew.jpg" alt="car"/>
           <h3 className="Stepinto" >Pripoj sa k Nám!</h3>
           <p></p>
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Naziv-fontu"></link>
