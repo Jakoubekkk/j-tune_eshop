@@ -64,7 +64,7 @@ const Order = ({ importedCartItems }) => {
         products: products 
       })
       alert("Order sucessfully created!");
-      window.location.href = '/Home';
+      // window.location.href = '/Home';
     }
     else
     {  
@@ -195,7 +195,7 @@ const Order = ({ importedCartItems }) => {
         ) : null }
         <h2>Total: {totalPrice}€</h2>
         <br />
-        <button className="navsize" onClick={() => sendOrder()}>FINISH ORDER</button>
+        <button className="navsize" onClick={() => sendOrder()}><Link to="/Home" style={{ color: 'white' }}>test</Link></button>
       </div>
       <footer>
           <p>J-Tune Science 2020</p>
