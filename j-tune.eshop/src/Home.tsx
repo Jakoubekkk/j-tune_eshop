@@ -28,22 +28,22 @@ const Home = ({ importedCartItems }) => {
     {
       title: 'Mazda MX-5 má za sebou už štyri generácie a 35 rokov ',
       content: 'Bezpochyby najúspešnejší roadster na svete , a tak by sme mohli pomenovať MX-5.',
-      image: 'src/assets/miata3.jpg',
+      image: '/assets/miata3.jpg',
     },
     {
       title: 'Lexus RC F je V8 fosília ktorá MUSÍ prežiť. Atmosferický motor?',
       content: 'Dnes sa atmosférické benzínové motory už nenosia.',
-      image: 'src/assets/takumi.jpg',
+      image: '/assets/takumi.jpg',
     },
     {
       title: 'Honda NSX: Japonské "Ferrari" otriaslo v Amerike pred 25 rokmi',
       content: 'Japonci predstavili v roku 1989 v Chicagu superšport.',
-      image: 'src/assets/nsx3.jpg',
+      image: '/assets/nsx3.jpg',
     },
     {
       title: 'Porsche boxster 986 S. Legenda a zábavné kabrio za dobrý peniaz?',
       content: 'Pôvodné Porsche Boxster z roku 1996.',
-      image: 'src/assets/boxster1.jpg',
+      image: '/assets/boxster1.jpg',
     },
   ];
   
