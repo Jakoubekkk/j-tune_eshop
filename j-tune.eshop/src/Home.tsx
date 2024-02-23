@@ -38,7 +38,7 @@ const Home = ({ importedCartItems }) => {
     {
       title: 'Honda NSX: Japonské "Ferrari" otriaslo v Amerike pred 25 rokmi',
       content: 'Japonci predstavili v roku 1989 v Chicagu superšport.',
-      image: '/assets/nsx3.jpg',
+      image: '/assets/nsx3.JPG',
     },
     {
       title: 'Porsche boxster 986 S. Legenda a zábavné kabrio za dobrý peniaz?',
