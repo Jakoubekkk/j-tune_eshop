@@ -32,7 +32,7 @@ const Clanok3 = ({ importedCartItems }) => {
         <main>  
           <div className="blog">
             <div className="blog-section">
-              <img src="src/img/nsx1.jpg" alt="NSX" />
+              <img src="/assets/nsx1.jpg" alt="NSX" />
               <div className="text-section">
                 <h2>Auto ktoré urobilo rozruch</h2>
                 <p>
@@ -53,7 +53,7 @@ const Clanok3 = ({ importedCartItems }) => {
                 Konštrukcia bola na tie časy naozaj revolučná. Superšport, vtedy ešte s pracovným názvom Honda New Sport, dostal ako prvý sériový automobil hliníkový monokok a odpruženie. Len na karosérii sa podarilo ušetriť 200 kg v porovnaní s bežnou oceľovou konštrukciou. Hliníkové komponenty podvozku zas znížili váhu neodpružených hmôt o 20 kg. Rovnako pokrokový bol brzdový systém so 4-kanálovým ABS a elektronické ovládanie škrtiacej klapky.
                 </p>
               </div>
-              <img src="src/img/nsx2.jpg" alt="nsx" />
+              <img src="/assets/nsx2.jpg" alt="nsx" />
             </div>
           </div>
         </main>

@@ -32,7 +32,7 @@ const Clanok4 = ({ importedCartItems }) => {
         <main>  
           <div className="blog">
             <div className="blog-section">
-              <img src="src/img/boxster2.jpg" alt="Porsche boxster" />
+              <img src="/assets/boxster2.jpg" alt="Porsche boxster" />
               <div className="text-section">
                 <h2>Malé Porsche s veľkou dušou</h2>
                 <p>
@@ -53,7 +53,7 @@ const Clanok4 = ({ importedCartItems }) => {
                 Iste, prvá cayenne je ešte lacnejšia (od zhruba 7000 EUR). Lenže to je SUV, navyše technicky spriaznené s VW Touaregom alebo prvé Audi Q7. Áno, lacnejšie môže byť aj transaxle 924 alebo 944, avšak to sú o dekádu staršie autá, ktoré chcú svoje. Navyše ceny týchto vozidiel rýchlo rastú, takže zachovalé kusy vyjdú na viac ako štvrť milióna korún.
                 </p>
               </div>
-              <img src="src/img/boxster3.jpg" alt="Boxster986" />
+              <img src="/assets/boxster3.jpg" alt="Boxster986" />
             </div>
           </div>
         </main>

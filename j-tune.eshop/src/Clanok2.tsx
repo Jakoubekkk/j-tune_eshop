@@ -34,7 +34,7 @@ const Clanok2 = ({ importedCartItems }) => {
         <main>  
           <div className="blog">
             <div className="blog-section">
-              <img src="src/img/lexus.png" alt="Lexus RCF" />
+              <img src="/assets/lexus.png" alt="Lexus RCF" />
               <div className="text-section">
                 <h2>Lexus RC-F Takumi Edition : Posledný mohykán</h2>
                 <p>
@@ -59,7 +59,7 @@ const Clanok2 = ({ importedCartItems }) => {
                 Na vyskúšanie verzie RC F Takumi Edition, ktorá spája špičkové remeselné spracovanie s opojnými jazdnými schopnosťami športového vozidla, nebudú musieť európski zákazníci čakať dlho. Výroba a montáž Takumi prebieha od januára a prvé dodávky sú naplánované začiatok leta 2023.
                 </p>
               </div>
-              <img src="src/img/lexus2.jpg" alt="Lexus RCF" />
+              <img src="/assets/lexus2.jpg" alt="Lexus RCF" />
             </div>
           </div>
         </main>

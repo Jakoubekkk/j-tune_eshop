@@ -35,7 +35,7 @@ const NavBar = ({shoppingCartItems}) => {
       </nav>
 
       <div className="Cart">
-        <Link to="/ShoppingCart" state={{ cartData: cartData }}><img style={{ width: 50, height: 50 }} src="src/img/cartico.jpg"/>({cartData ? cartData.length : 0})</Link>
+        <Link to="/ShoppingCart" state={{ cartData: cartData }}><img style={{ width: 50, height: 50 }} src="/assets/cartico.jpg"/>({cartData ? cartData.length : 0})</Link>
       </div>
       <button onClick={handleLogOut}><Link to="/Login" style={{ color: 'white' }}>Sign out</Link></button>
     </header>
