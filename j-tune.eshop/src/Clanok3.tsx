@@ -32,7 +32,7 @@ const Clanok3 = ({ importedCartItems }) => {
         <main>  
           <div className="blog">
             <div className="blog-section">
-              <img src="src/img/nsx.jpg" alt="NSX" />
+              <img src="src/img/nsx1.jpg" alt="NSX" />
               <div className="text-section">
                 <h2>Auto ktoré urobilo rozruch</h2>
                 <p>
