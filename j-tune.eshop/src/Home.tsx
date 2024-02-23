@@ -28,22 +28,22 @@ const Home = ({ importedCartItems }) => {
     {
       title: 'Mazda MX-5 má za sebou už štyri generácie a 35 rokov ',
       content: 'Bezpochyby najúspešnejší roadster na svete , a tak by sme mohli pomenovať MX-5.',
-      image: 'src/img/miata3.jpg',
+      image: 'src/assets/miata3.jpg',
     },
     {
       title: 'Lexus RC F je V8 fosília ktorá MUSÍ prežiť. Atmosferický motor?',
       content: 'Dnes sa atmosférické benzínové motory už nenosia.',
-      image: 'src/img/takumi.jpg',
+      image: 'src/assets/takumi.jpg',
     },
     {
       title: 'Honda NSX: Japonské "Ferrari" otriaslo v Amerike pred 25 rokmi',
       content: 'Japonci predstavili v roku 1989 v Chicagu superšport.',
-      image: 'src/img/nsx3.jpg',
+      image: 'src/assets/nsx3.jpg',
     },
     {
       title: 'Porsche boxster 986 S. Legenda a zábavné kabrio za dobrý peniaz?',
       content: 'Pôvodné Porsche Boxster z roku 1996.',
-      image: 'src/img/boxster1.jpg',
+      image: 'src/assets/boxster1.jpg',
     },
   ];
   
@@ -54,7 +54,7 @@ return (
         <main>
         <div className="home-container">
           <div className="home-page">
-            <h1>Zaujímavé článkny zo sveta motorizmu.</h1>
+            <h1>Zaujímavé článkny zo sveta m</h1>
             <div className="articles-container">
               {articles.map((article, index) => (
                 <Link to={`/Clanok${index + 1}`} state={{ cartData: cartItems }} key={index} className="article-link">
