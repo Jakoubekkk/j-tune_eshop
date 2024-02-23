@@ -39,7 +39,7 @@ const Contact = ({ importedCartItems }) => {
         <p>Instagram: @j_tune.sk</p>
         <p>Facebook: J-Tune.sk</p>
       </div>
-      <img src="/assets/iso.jpg" alt="j-tune" />
+      <img src="/assets/lexusik.JPG" alt="j-tune" />
     </div>     
       </main>
       <footer>
