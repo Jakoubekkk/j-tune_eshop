@@ -49,7 +49,7 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ importedCartItems }) => {
         {cartItems && cartItems.length > 0 ? <button className="navsize" ><Link to="/Order" state={{ cartData: cartItems }} style={{ color: 'white' }}>Check order</Link></button> : null}
       </div>
       <footer>
-          <p>J-Tune Science 2020</p>
+          <p>J-Tune Since 2020</p>
         </footer>
     </div>
   );

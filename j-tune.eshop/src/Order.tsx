@@ -198,7 +198,7 @@ const Order = ({ importedCartItems }) => {
         <button className="navsize" onClick={() => sendOrder()}><Link to="/Home" style={{ color: 'white' }}>Order</Link></button>
       </div>
       <footer>
-          <p>J-Tune Science 2020</p>
+          <p>J-Tune Since 2020</p>
         </footer>
     </div>
   );
