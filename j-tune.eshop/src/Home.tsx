@@ -54,7 +54,7 @@ return (
         <main>
         <div className="home-container">
           <div className="home-page">
-            <h1>Zaujímavé článkny zo sveta motorizmu</h1>
+            <h1>Zaujímavé články zo sveta motorizmu</h1>
             <div className="articles-container">
               {articles.map((article, index) => (
                 <Link to={`/Clanok${index + 1}`} state={{ cartData: cartItems }} key={index} className="article-link">
