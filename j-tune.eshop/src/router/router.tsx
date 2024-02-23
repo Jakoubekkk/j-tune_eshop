@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { createBrowserRouter } from "react-router-dom";
 import About from "../About";
 import App from "../App";

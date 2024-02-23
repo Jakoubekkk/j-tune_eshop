@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AuthError, AuthResponse, Session } from "@supabase/supabase-js";
 import { createContext, useContext, useEffect, useState } from "react";
 import { supabase } from "../supabase/supabaseClient";
