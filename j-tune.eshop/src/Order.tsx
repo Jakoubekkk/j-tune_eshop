@@ -195,7 +195,7 @@ const Order = ({ importedCartItems }) => {
         ) : null }
         <h2>Total: {totalPrice}€</h2>
         <br />
-        <button className="navsize" onClick={() => sendOrder()}><Link to="/Home" style={{ color: 'white' }}>test</Link></button>
+        <button className="navsize" onClick={() => sendOrder()}><Link to="/Home" style={{ color: 'white' }}>Order</Link></button>
       </div>
       <footer>
           <p>J-Tune Science 2020</p>
