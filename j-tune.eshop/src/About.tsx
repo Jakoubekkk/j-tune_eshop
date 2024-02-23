@@ -35,7 +35,7 @@ const About = ({ importedCartItems }) => {
           vášeň pre automobily. Naša skupina bola založená v roku 2020 a rozrástla sa na veľkú komunitu milovníkov áut, ktorí oceňujú krásu a
           remeselné spracovanie vozidiel.
           </p>
-          <img src="src/img/foto.jpg" alt="j-tune" />
+          <img src="/assets/foto.jpg" alt="j-tune" />
           <p>
             My veríme v autá čo majú dušu!
           </p>
