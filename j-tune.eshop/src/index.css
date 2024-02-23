@@ -90,9 +90,10 @@ footer {
 background-color: #1f1f1ffa;
 font-size: 30px;
 font-family: fantasy;
+border-radius: 25px;
 }
 .Stepin:hover {
-    background-color: #fd0404fa;
+    background-color: #f44336;
     transform: scale(1.05);
   }
 
@@ -170,7 +171,7 @@ p {
 }
 
 a {
-  color: #00cc99;
+  color: #588888;
   text-decoration: none;
   font-weight: bold;
 }
@@ -213,16 +214,15 @@ a {
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: white; /* Biele pozadie */
+  background-color: white; 
 }
-
 .cart-item {
   display: flex;
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #eee; /* Šedé políčko */
+  border: 1px solid #eee; 
   border-radius: 4px;
-  background-color: #f8f8f8; /* Biele pozadie v boxe */
+  background-color: #f8f8f8; 
   width: 30%;
   align-items: center;
   
