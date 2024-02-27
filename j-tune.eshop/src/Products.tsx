@@ -89,8 +89,8 @@ const Products = ({ importedCartItems }) => {
                 <option value="XL">XL</option>
                 <option value="XXL">XXL</option>
               </select>
-              <p>Price: {product.price}€</p>
-              <button className="addtocart" onClick={() => addToCart(product)}>Add to Cart</button>
+              <p>Cena: {product.price}€</p>
+              <button className="addtocart" onClick={() => addToCart(product)}>Pridať do košíka</button>
             </div>
           ))}
           </div>

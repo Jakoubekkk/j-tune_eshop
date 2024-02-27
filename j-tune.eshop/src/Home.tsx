@@ -33,7 +33,7 @@ const Home = ({ importedCartItems }) => {
     {
       title: 'Lexus RC F je V8 fosília ktorá MUSÍ prežiť. Atmosferický motor?',
       content: 'Dnes sa atmosférické benzínové motory už nenosia.',
-      image: '/assets/lexus.png',
+      image: '/assets/lexus.jpg',
     },
     {
       title: 'Honda NSX: Japonské "Ferrari" otriaslo v Amerike pred 25 rokmi',

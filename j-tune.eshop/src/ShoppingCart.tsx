@@ -31,22 +31,22 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ importedCartItems }) => {
     <div>
       <NavBar shoppingCartItems={cartItems} />
       <div className="shopping-cart">
-        <h2>Your Shopping Cart</h2>
+        <h2>Tvoj nákupný košík</h2>
         {cartItems ? (
           cartItems.map((item, index) => (
             <div key={index} className="cart-item">
               <img src={item.img_url} alt={item.description} />
               <div>
                 <h3>{item.description}</h3>
-                <p>Size: {item.size}</p>
-                <p>Price: {item.price}€</p>
-                <button onClick={() => removeProduct(item.id)}>Remove Product</button>
+                <p>Veľkosť: {item.size}</p>
+                <p>Cena: {item.price}€</p>
+                <button onClick={() => removeProduct(item.id)}>Odstrániť produkt</button>
               </div>
             </div>     
           ))
         ) : null }
         <br></br>
-        {cartItems && cartItems.length > 0 ? <button className="navsize" ><Link to="/Order" state={{ cartData: cartItems }} style={{ color: 'white' }}>Check order</Link></button> : null}
+        {cartItems && cartItems.length > 0 ? <button className="navsize" ><Link to="/Order" state={{ cartData: cartItems }} style={{ color: 'white' }}>Skontrolovať objednávku</Link></button> : null}
       </div>
       <footer>
           <p>J-Tune Since 2020</p>

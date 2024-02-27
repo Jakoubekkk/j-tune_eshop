@@ -27,17 +27,17 @@ const NavBar = ({shoppingCartItems}) => {
       
       <nav>
         <ul>          
-          <li className="navsize"><Link to="/home" state={{ cartData: cartData }}>Home</Link></li>
-          <li className="navsize"><Link to="/about" state={{ cartData: cartData }}>About</Link></li>
-          <li className="navsize"><Link to="/products" state={{ cartData: cartData }}>Products</Link></li>
-          <li className="navsize"><Link to="/contact" state={{ cartData: cartData }}>Contact</Link></li>
+          <li className="navsize"><Link to="/home" state={{ cartData: cartData }}>Domov</Link></li>
+          <li className="navsize"><Link to="/about" state={{ cartData: cartData }}>O Nás</Link></li>
+          <li className="navsize"><Link to="/products" state={{ cartData: cartData }}>Produkty</Link></li>
+          <li className="navsize"><Link to="/contact" state={{ cartData: cartData }}>Kontakt</Link></li>
         </ul>
       </nav>
 
       <div className="Cart">
         <Link to="/ShoppingCart" state={{ cartData: cartData }}><img style={{ width: 50, height: 50 }} src="/assets/cartico.jpg"/>({cartData ? cartData.length : 0})</Link>
       </div>
-      <button onClick={handleLogOut}><Link to="/Login" style={{ color: 'white' }}>Sign out</Link></button>
+      <button onClick={handleLogOut}><Link to="/Login" style={{ color: 'white' }}>Odhlásiť sa</Link></button>
     </header>
   );
 };

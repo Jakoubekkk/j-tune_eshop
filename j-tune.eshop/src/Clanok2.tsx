@@ -34,7 +34,7 @@ const Clanok2 = ({ importedCartItems }) => {
         <main>  
           <div className="blog">
             <div className="blog-section">
-              <img src="/assets/lexus.png" alt="Lexus RCF" />
+              <img src="/assets/lexus.jpg" alt="Lexus RCF" />
               <div className="text-section">
                 <h2>Lexus RC-F Takumi Edition : Posledný mohykán</h2>
                 <p>

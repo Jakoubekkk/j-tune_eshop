@@ -109,15 +109,15 @@ const Order = ({ importedCartItems }) => {
 
       <main>
         <a className="warning">{warning}</a>
-        <h2>Delivery information</h2>
+        <h2>Detail objednávky</h2>
 
         <div className="order-inline">
           <div className="order-incolumn">
-            <label className="order-label" htmlFor="name">Name</label>
+            <label className="order-label" htmlFor="name">Meno</label>
             <input ref={name} className="rounded-input" type="text" id="name" placeholder="Name" />
           </div>
           <div className="order-incolumn">
-            <label className="order-label" htmlFor="order-surname">Surname</label>
+            <label className="order-label" htmlFor="order-surname">Priezvisko</label>
             <input ref={surname} className="rounded-input" type="text" id="surname" placeholder="Surname" />
           </div>
         </div>
@@ -128,7 +128,7 @@ const Order = ({ importedCartItems }) => {
             <input ref={email} className="rounded-input" type="text" id="email" placeholder="E-Mail" />
           </div>
           <div className="order-incolumn">
-            <label className="order-label" htmlFor="phone">Phone number</label>
+            <label className="order-label" htmlFor="phone">Tel. číslo</label>
             <input ref={phone} className="rounded-input" type="number" id="phone" placeholder="Phone number" />
           </div>
         </div>
@@ -138,22 +138,22 @@ const Order = ({ importedCartItems }) => {
 
         <div className="order-inline">
           <div className="order-incolumn">
-            <label className="order-label" htmlFor="address">Address</label>
+            <label className="order-label" htmlFor="address">Adresa</label>
             <input ref={address} className="rounded-input" type="text" id="address" placeholder="Address" />
           </div>
           <div className="order-incolumn">
-            <label className="order-label" htmlFor="city">City</label>
+            <label className="order-label" htmlFor="city">Mesto</label>
             <input ref={city} className="rounded-input" type="text" id="city" placeholder="City" />
           </div>
         </div>
 
         <div className="order-inline">
           <div className="order-incolumn">
-            <label className="order-label" htmlFor="country">Country</label>
+            <label className="order-label" htmlFor="country">Krajina</label>
             <input ref={country} className="rounded-input" type="text" id="country" placeholder="Country" />
           </div>
           <div className="order-incolumn">
-            <label className="order-label" htmlFor="postal">Postal code</label>
+            <label className="order-label" htmlFor="postal">PSČ</label>
             <input ref={postal_code} className="rounded-input" type="text" id="postal" placeholder="Postal code" />
           </div>
         </div>
@@ -163,39 +163,39 @@ const Order = ({ importedCartItems }) => {
 
         <div className="order-inline">
           <div className="order-incolumn">
-          <label className="order-label">Delivery</label>
+          <label className="order-label">Doprava</label>
             <div className="order-rectangle">
               <input ref={delivery_slovakpost} type="radio" defaultChecked="true" id="slovak_post" name="delivery" value="slovak_post" />
-              <label htmlFor="slovak_post">Slovak Post</label>
+              <label htmlFor="slovak_post">Slovenská pošta</label>
             </div>
           </div>
           <div className="order-incolumn">
-            <label className="order-label">Payment</label>
+            <label className="order-label">Platba</label>
             <div className="order-rectangle">
               <input ref={payment_cash_on_delivery} type="radio" defaultChecked="true" id="cash_on_delivery" name="payment" value="cash_on_delivery" />
-              <label htmlFor="cash_on_delivery">Cash on delivery</label>
+              <label htmlFor="cash_on_delivery">Na dobierku</label>
             </div>
             </div>
         </div>
       </main>
 
       <div className="shopping-cart">
-        <h2>Order summary</h2>
+        <h2>Súhrn Nákupu</h2>
         {cartItems ? (
           cartItems.map((item, index) => (
             <div key={index} className="cart-item">
               <img src={item.img_url} alt={item.description} />
               <div>
                 <h3>{item.description}</h3>
-                <p>Size: {item.size}</p>
-                <p>Price: {item.price}€</p>
+                <p>Veľkosť: {item.size}</p>
+                <p>Cena: {item.price}€</p>
               </div>
             </div>     
           ))
         ) : null }
-        <h2>Total: {totalPrice}€</h2>
+        <h2>Celkovo: {totalPrice}€</h2>
         <br />
-        <button className="navsize" onClick={() => sendOrder()}><Link to="/Home" style={{ color: 'white' }}>Order</Link></button>
+        <button className="navsize" onClick={() => sendOrder()}><Link to="/Home" style={{ color: 'white' }}>Objednať</Link></button>
       </div>
       <footer>
           <p>J-Tune Since 2020</p>

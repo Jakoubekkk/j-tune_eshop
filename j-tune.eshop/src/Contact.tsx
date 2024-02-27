@@ -35,7 +35,7 @@ const Contact = ({ importedCartItems }) => {
       </p>
       <div className="contact-info">
         <p>Email: j.tune@gmail.com</p>
-        <p>Phone: +421905573829</p>
+        <p>Telefón: +421905573829</p>
         <p>Instagram: @j_tune.sk</p>
         <p>Facebook: J-Tune.sk</p>
       </div>
