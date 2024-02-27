@@ -7,10 +7,10 @@ import { supabase } from "./supabase/supabaseClient";
 
 const Order = ({ importedCartItems }) => {
 
-  const [cartItems, setCartItems] = useState<Product[]>([]);
+  const [cartItems, setCartItems] = useState<Product[]>([]);  //globálne premenne
   const [totalPrice, setTotalPrice] = useState();
   const [warning, setWarning] = useState("");
-
+  //referencie pre textové polia vo formulári
   const name = useRef();
   const surname = useRef();
   const email = useRef();
@@ -21,7 +21,7 @@ const Order = ({ importedCartItems }) => {
   const postal_code = useRef();
   const delivery_slovakpost = useRef();
   const payment_cash_on_delivery = useRef();
-
+  //Funkcia na odoslanie objednávky
   const sendOrder = async () => {
 
     if (
@@ -29,7 +29,7 @@ const Order = ({ importedCartItems }) => {
       surname.current.value != "" &&
       email.current.value != "" &&
       phone.current.value != "" &&
-      address.current.value != "" &&
+      address.current.value != "" &&            //kontrola či sú vyplnené políčka
       city.current.value != "" &&
       country.current.value != "" &&
       postal_code.current.value != "" &&
@@ -43,15 +43,15 @@ const Order = ({ importedCartItems }) => {
       if (delivery_slovakpost.current.checked)
       {
         delivery_type = "Slovak post";
-      }
+      }                                               // predvolenie platby a dopravy
   
       if (payment_cash_on_delivery.current.checked)
       {
         payment_type = "Cash on delivery";
       }
   
-      cartItems.map((item) => (products += item.description + "-Size:" + item.size + " | "))
-  
+      cartItems.map((item) => (products += item.description + "-Size:" + item.size + " | "))  //pre každý produkt v košíku dopíše udaje o ňom
+      // Vloženie objednávky do databázy
       const { } = await supabase
       .from('orders')
       .insert({ 
@@ -64,15 +64,14 @@ const Order = ({ importedCartItems }) => {
         products: products 
       })
       alert("Order sucessfully created!");
-      // window.location.href = '/Home';
     }
     else
     {  
-      setWarning("Please, fill all your information first!");
-      window.scrollTo({top: 0, behavior: 'smooth'});
+      setWarning("Please, fill all your information first!");  // Upozornenie na nevyplnené políčka
+      window.scrollTo({top: 0, behavior: 'smooth'});          
     }
   }
-  
+  // Načítanie dát z URL, ak sú k dispozícii
     const location = useLocation()
     {
       if (location.state != null)
@@ -94,7 +93,7 @@ const Order = ({ importedCartItems }) => {
     calculateTotal()  
   }, [cartItems]);
   
-
+  // Funkcia na výpočet celkovej ceny
   function calculateTotal()
   {
     let total = 0;

@@ -8,24 +8,24 @@ import './Products.css';
 
 type Product = {
   id: number;
-  description: string;
+  description: string;        //definícia typu Produkt
   price: number;
   img_url: string;
   size: string;
 };
 
 const Products = ({ importedCartItems }) => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);             // stav pre produkty, nákupný košík a notifikáciu
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [notification, setNotification] = useState<string | null>(null);
 
-  const location = useLocation()
+  const location = useLocation()   
   if (location.state != null)
   {
     const { cartData } = location.state
     importedCartItems = cartData;
   }
-  useEffect(() => {
+  useEffect(() => {                          //ak sú dáta pre košík, aktualizuje CartItems
     if (importedCartItems != null)
     {
       setCartItems(importedCartItems)
@@ -35,7 +35,7 @@ const Products = ({ importedCartItems }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       const { data, error } = await supabase
-        .from("products")
+        .from("products")                                 //načítanie produktov z databázy Supabase
         .select("id, description, price, img_url")
         .range(0, 100);
 
@@ -52,15 +52,15 @@ const Products = ({ importedCartItems }) => {
 
     fetchProducts();
   }, []);
-
+  // Funkcia na pridanie produktu do košíka
   const addToCart = (product: Product) => {
     setCartItems([...cartItems, product]);
-    setNotification(`${product.description} has been added to your cart.`);
+    setNotification(`${product.description} has been added to your cart.`);       
     setTimeout(() => {
       setNotification(null);
     }, 3000);
   };
-
+  // Zmena veľkosti oblečenia
   const handleSizeChange = (e: React.ChangeEvent<HTMLSelectElement>, productId: number) => {
     const newSize = e.target.value;
     const updatedProducts = products.map(product => {
@@ -82,7 +82,7 @@ const Products = ({ importedCartItems }) => {
             <div key={product.id} className="product-box">
               <img src={product.img_url} alt={product.description} />
               <h2>{product.description}</h2>
-              <select value={product.size} onChange={(e) => handleSizeChange(e, product.id)}>
+               <select value={product.size} onChange={(e) => handleSizeChange(e, product.id)}>              {/* zmena velkosti oblečenia */}
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>

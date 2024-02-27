@@ -6,13 +6,13 @@ import { useLocation, Link } from 'react-router-dom'
 
 const ShoppingCart: React.FC<ShoppingCartProps> = ({ importedCartItems }) => {
 
-  const [cartItems, setCartItems] = useState();
+  const [cartItems, setCartItems] = useState();     //Stav pre položky v nákupnom košíku
 
   const location = useLocation()
   if (location.state != null)
   {
     const { cartData } = location.state
-    importedCartItems = cartData;
+    importedCartItems = cartData;                       
   }
   useEffect(() => {
     if (importedCartItems != null)
@@ -20,9 +20,9 @@ const ShoppingCart: React.FC<ShoppingCartProps> = ({ importedCartItems }) => {
       setCartItems(importedCartItems)
     }
   }, [importedCartItems]);
-
+  //Funkcia na odstránenia produktov z košíka
   const removeProduct = (productId: number) => {
-    const indexToDelete = cartItems.findIndex((item) => item.id === productId);
+    const indexToDelete = cartItems.findIndex((item) => item.id === productId);       
     const updatedCart = [...cartItems.slice(0, indexToDelete), ...cartItems.slice(indexToDelete + 1)];
     setCartItems(updatedCart)
   };
