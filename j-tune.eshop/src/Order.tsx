@@ -4,6 +4,8 @@ import NavBar from "./NavBar";
 import { useEffect, useState, useRef } from "react";
 import { useLocation, Link } from 'react-router-dom';
 import { supabase } from "./supabase/supabaseClient";
+import { loadScript } from "@paypal/paypal-js";
+
 
 const Order = ({ importedCartItems }) => {
 
@@ -49,8 +51,11 @@ const Order = ({ importedCartItems }) => {
       {
         payment_type = "Cash on delivery";
       }
+      {
+        payment_type = "Cash on delivery";
+      }
   
-      cartItems.map((item) => (products += item.description + "-Size:" + item.size + " | "))  //pre každý produkt v košíku dopíše udaje o ňom
+      cartItems.map((item) => (products += item.description + "-Size:" + item.size + " | "))  //možnosť menenia veľkosti oblečenia
       // Vloženie objednávky do databázy
       const { } = await supabase
       .from('orders')
@@ -173,6 +178,10 @@ const Order = ({ importedCartItems }) => {
             <div className="order-rectangle">
               <input ref={payment_cash_on_delivery} type="radio" defaultChecked="true" id="cash_on_delivery" name="payment" value="cash_on_delivery" />
               <label htmlFor="cash_on_delivery">Na dobierku</label>
+            </div>
+            <div className="order-rectangle">
+              <input ref={payment_cash_on_delivery} type="radio" defaultChecked="true" id="online_payment" name="payment" value="online_payment" />
+              <label htmlFor="cash_on_delivery">PayPal</label>
             </div>
             </div>
         </div>
