@@ -46,7 +46,6 @@ function onApprove(data, actions) {
   return actions.order.capture().then(function(details) {
     setPaymentButtonsVisible(false);
     setCreateOrderButtonVisible(true);
-    sendOrder();
   });
 }
 
