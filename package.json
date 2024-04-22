@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@paypal/react-paypal-js": "^8.2.0",
     "stripe": "^14.23.0"
   }
 }
