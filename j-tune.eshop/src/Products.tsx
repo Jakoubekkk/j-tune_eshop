@@ -14,9 +14,9 @@ type Product = {
   size: string;
 };
 
-const Products = ({ importedCartItems }) => {
-  const [products, setProducts] = useState<Product[]>([]);             // stav pre produkty, nákupný košík a notifikáciu
-  const [cartItems, setCartItems] = useState<Product[]>([]);
+const Products = ({ importedCartItems }) => {                                 
+  const [products, setProducts] = useState<Product[]>([]);             
+  const [cartItems, setCartItems] = useState<Product[]>([]);               
   const [notification, setNotification] = useState<string | null>(null);
 
   const location = useLocation()   
@@ -52,7 +52,7 @@ const Products = ({ importedCartItems }) => {
 
     fetchProducts();
   }, []);
-  // Funkcia na pridanie produktu do košíka
+  // Funkcia kotrá sa vykoná po pridaní produktov do košíka
   const addToCart = (product: Product) => {
     setCartItems([...cartItems, product]);
     setNotification(`${product.description} has been added to your cart.`);       

@@ -42,7 +42,7 @@ const Order = ({ importedCartItems }) => {
     });
   }
 
-function onApprove(data, actions) {
+function onApprove(data, actions) {                               //spustí sa ak prejde platba PayPal
   return actions.order.capture().then(function(details) {
     setPaymentButtonsVisible(false);
     setCreateOrderButtonVisible(true);
@@ -80,7 +80,7 @@ function onApprove(data, actions) {
     }
   }
 
-  const sendOrder = async() => {
+  const sendOrder = async() => {      // funkcia ktorá odosiela dáta na supabase 
     let delivery_type = "";
       let payment_type = "";
       let products = "";
@@ -99,7 +99,7 @@ function onApprove(data, actions) {
         payment_type = "PayPal";
       }
   
-      cartItems.map((item) => (products += item.description + "-Size:" + item.size + " | "))  //možnosť menenia veľkosti oblečenia
+      cartItems.map((item) => (products += item.description + "-Size:" + item.size + " | "))  //formátovanie pre databázu
       // Vloženie objednávky do databázy
       const { } = await supabase
       .from('orders')
@@ -115,7 +115,7 @@ function onApprove(data, actions) {
       alert("Objednavka úspešne vytvorená!")
   }
 
-  // Načítanie dát z URL, ak sú k dispozícii
+  // Načítanie dát v košíku
     const location = useLocation()
     {
       if (location.state != null)
@@ -137,10 +137,6 @@ function onApprove(data, actions) {
     calculateTotal()  
   }, [cartItems]);
 
-  
-  useEffect(() => {
-    console.log("AHOJ")
-  }, [payment_paypal]);
   
   // Funkcia na výpočet celkovej ceny
   function calculateTotal()
