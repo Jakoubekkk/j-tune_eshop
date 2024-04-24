@@ -54,6 +54,7 @@ const Clanok1 = ({ importedCartItems }) => {
                 Airbagy či ABS neboli v sérii, za tie ste si najprv priplácali, rovnako ste mali v cenníku aj klimatizáciu či vyhrievané sedadlá.
                 Do predaja sa MX-5 dostala s benzínovým štvorvalcom 1.6 a výkonom 85 kW (115 koní). Následne v roku 1994 prišla väčšia 1.8 naladená na 96 kW (131 koní) a o pár mesiacov sa do ponuky vrátila aj menšia 1.6 s 66 kW (90 koní).
                 </p>
+                <p>*Pôvodný článok nájdete na webe www.volant.tv*</p>
               </div>
               <img src="/assets/miata4.jpg" alt="Mazda mx5" />
             </div>

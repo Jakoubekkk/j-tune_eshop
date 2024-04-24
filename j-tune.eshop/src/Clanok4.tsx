@@ -52,6 +52,7 @@ const Clanok4 = ({ importedCartItems }) => {
                 Prvý boxster dnes predstavuje zrejme finančne najľahšiu cestu k zaobstaraniu naozaj športového porsche. Keď sa pozriete aj len do slovenskej inzercie, zistíte, že pojazdné a napríklad aj pohľadovo celkom slušné exempláre je možné pri troche šťastia zohnať aj za 10 000 EUR. 
                 Iste, prvá cayenne je ešte lacnejšia (od zhruba 7000 EUR). Lenže to je SUV, navyše technicky spriaznené s VW Touaregom alebo prvé Audi Q7. Áno, lacnejšie môže byť aj transaxle 924 alebo 944, avšak to sú o dekádu staršie autá, ktoré chcú svoje. Navyše ceny týchto vozidiel rýchlo rastú, takže zachovalé kusy vyjdú na viac ako štvrť milióna korún.
                 </p>
+                <p>*Pôvodný článok nájdete na webe www.volant.tv*</p>
               </div>
               <img src="/assets/boxster3.jpg" alt="Boxster986" />
             </div>

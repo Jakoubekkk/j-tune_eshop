@@ -58,6 +58,7 @@ const Clanok2 = ({ importedCartItems }) => {
                 Sivý odtieň Titanium Carbide kombinuje tvrdosť titánu s neutrálnou stredne jasnou sivou a tlmeným tónom, pričom decentne odkazuje na pokrvnú príbuznosť s pretekárskymi vozidlami a necháva vyniknúť pútavý vzhľad tohto vyhotovenia.
                 Na vyskúšanie verzie RC F Takumi Edition, ktorá spája špičkové remeselné spracovanie s opojnými jazdnými schopnosťami športového vozidla, nebudú musieť európski zákazníci čakať dlho. Výroba a montáž Takumi prebieha od januára a prvé dodávky sú naplánované začiatok leta 2023.
                 </p>
+                <p>*Pôvodný článok nájdete na webe www.volant.tv*</p>
               </div>
               <img src="/assets/lexus2.jpg" alt="Lexus RCF" />
             </div>

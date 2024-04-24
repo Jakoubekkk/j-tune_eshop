@@ -52,6 +52,7 @@ const Clanok3 = ({ importedCartItems }) => {
                 Revolučná konštrukcia karosérie s hliníkovým monokokom priniesla úsporu hmotnosti až 200 kg.
                 Konštrukcia bola na tie časy naozaj revolučná. Superšport, vtedy ešte s pracovným názvom Honda New Sport, dostal ako prvý sériový automobil hliníkový monokok a odpruženie. Len na karosérii sa podarilo ušetriť 200 kg v porovnaní s bežnou oceľovou konštrukciou. Hliníkové komponenty podvozku zas znížili váhu neodpružených hmôt o 20 kg. Rovnako pokrokový bol brzdový systém so 4-kanálovým ABS a elektronické ovládanie škrtiacej klapky.
                 </p>
+                <p>*Pôvodný článok nájdete na webe www.volant.tv*</p>
               </div>
               <img src="/assets/nsx2.JPG" alt="nsx" />
             </div>
